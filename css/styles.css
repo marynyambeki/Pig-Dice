@@ -3,3 +3,23 @@ html,body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+.container::after {
+    display: table;
+    clear:both;
+    content: '';
+}
+.player-0-panel,
+.player-0-0-panel {
+    width:60%;
+    float: left;
+    height:445px;
+    padding:100px;
+    background-color:white;
+    margin-left: 250px;
+    margin-top: 100px;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.7;
+
+
+}
