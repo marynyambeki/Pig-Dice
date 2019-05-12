@@ -56,4 +56,27 @@ const checkForWin = () => {
             }
     }
 };
-  
+function keepTotalScore() {
+    checkForWin();
+    if (currentPlayer === 'player1' && player1TotalScore.textContent !== '0') {
+            const currentTotal = player1TotalScore.textContent;
+            const currentTotal = player1Score.textContent;
+            const newTotal = Number(currentTotal) + Number(currentTotal);
+            player1Score.textContent = newTotal;
+            player1TotalScore.textContent = '0';
+            currentPlayer = 'player2';
+            player1.classList.remove('activeJS');
+            player2.classList.add('activeJS');
+            checkForWin();
+    } else if (currentPlayer === 'player2' && player2TotalScore.textContent !== '0') {
+            const currentTemp = player2TotalScore.textContent;
+            const currentTotal = player2Score.textContent;
+            const newTotal = Number(currentTotal) + Number(currentTotal);
+            player2Score.textContent = newTotal;
+            player2TotalScore.textContent = '0';
+            currentPlayer = 'player1';
+            player2.classList.remove('activeJS');
+            player1.classList.add('activeJS');
+            checkForWin();
+    }
+}
