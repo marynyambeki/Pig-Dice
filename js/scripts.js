@@ -27,16 +27,16 @@ let currentPlayer;
 
 
 function newGame() {
-    diceImg.setAttribute('src', `https://raw.githubusercontent.com/porquesammy/Pig-Dice-Game/master/assets/dice1.png`);
-    p1Score.textContent = '0';
-    p2Score.textContent = '0';
-    p1TempScore.textContent = '0';
-    p2TempScore.textContent = '0';
+    diceImg.setAttribute('src', `https://game-icons.net/1x1/delapouite/dice-six-faces-one.html`);
+    player1Score.textContent = '0';
+    player2Score.textContent = '0';
+    player1TotalScore.textContent = '0';
+    player2TotalScore.textContent = '0';
     player1.classList.remove('activeJS');
     player2.classList.remove('activeJS');
     player1.classList.add('activeJS');
-    currentPlayer = 'p1';
-    p1Score.style.color = '#444444';
-    p2Score.style.color = '#444444';
+    currentPlayer = 'player1';
+    player1Score.style.color = 'rgb(78, 8, 51';
+    player2Score.style.color = 'rgb(78, 8, 51';
 }
   
