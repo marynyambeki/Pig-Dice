@@ -12,12 +12,12 @@ var TotalScores, playerscore,activeplayer;//stors the global variables
 
 newGameBtn();//calls the init()function straight away which sets all values to 0
 
-const p1Score = document.querySelector('.player1Score');
-const p2Score = document.querySelector('.player2Score');
+const player1Score = document.querySelector('.player1Score');
+const player2Score = document.querySelector('.player2Score');
 const player1 = document.querySelector('.player1Header button');
 const player2 = document.querySelector('.player2Header button');
-const p1TempScore = document.querySelector('.player1TotalScoreNo');
-const p2TempScore = document.querySelector('.ScoreNo');
+const player1TotalScore = document.querySelector('.player1TotalScoreNo');
+const player2TotalScore = document.querySelector('.ScoreNo');
 const newGameBtn = document.querySelector('.newGameBtn');
 const keepBtn = document.querySelector('.keepBtn button');
 const diceImg = document.querySelector('.diceJS');
@@ -25,4 +25,18 @@ const rollBtn = document.querySelector('.rollBtn button');
 
 let currentPlayer;
 
+
+function newGame() {
+    diceImg.setAttribute('src', `https://raw.githubusercontent.com/porquesammy/Pig-Dice-Game/master/assets/dice1.png`);
+    p1Score.textContent = '0';
+    p2Score.textContent = '0';
+    p1TempScore.textContent = '0';
+    p2TempScore.textContent = '0';
+    player1.classList.remove('activeJS');
+    player2.classList.remove('activeJS');
+    player1.classList.add('activeJS');
+    currentPlayer = 'p1';
+    p1Score.style.color = '#444444';
+    p2Score.style.color = '#444444';
+}
   
