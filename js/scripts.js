@@ -39,4 +39,21 @@ function newGame() {
     player1Score.style.color = 'rgb(78, 8, 51';
     player2Score.style.color = 'rgb(78, 8, 51';
 }
+
+newGame();
+
+newGameBtn.addEventListener('click', () => newGame());
+
+const checkForWin = () => {
+    if (Number(player1Score.textContent) >= 100 || Number(player2Score.textContent) >= 100) {
+            currentPlayer = null;
+            player1.classList.remove('activeJS');
+            player2.classList.remove('activeJS');
+            if (Number(player1Score.textContent) >= 100) {
+                    player1Score.style.color = '#bada55';
+            } else {
+                    player2Score.style.color = '#bada55';
+            }
+    }
+};
   
