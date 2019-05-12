@@ -28,6 +28,7 @@ body {
 }
 
 .player1Div {
+    font-family: 'Permanent Marker', cursive;
     display: flex;
     flex-direction: column;
     flex: 1 1 100%;
@@ -36,6 +37,7 @@ body {
     height: 470px;
     margin: auto;
     padding-bottom: 60px;
+    border-radius: 20px;
 }
 
 .player1Header,
@@ -45,13 +47,16 @@ body {
     width: 167px;
     height: 53px;
     text-align: center;
+    font-family: 'Permanent Marker', cursive;
 
 }
 .player1Header{
     color:deeppink;
+    font-family: 'Permanent Marker', cursive;
 }
 .player2Header{
     color: deeppink;
+    font-family: 'Permanent Marker', cursive;
 }
 
 .player1Score,
@@ -63,11 +68,12 @@ body {
     opacity: 70;
     position: relative;
     transform: translate(0%, -13%);
+
 }
 
 .player1TotalScore,
 .player2TotalScore {
-    font-family: 'Balthazar', serif;
+    font-family: 'Permanent Marker', cursive;
     font-size: 0.7rem;
     text-align: center;
     color:whitesmoke;
@@ -79,9 +85,9 @@ body {
 .player2ScoreNo {
     position: relative;
     margin: auto;
-    font-family: 'Balthazar', serif;
+    font-family: 'Permanent Marker', cursive;
     font-size: 20px;
-    color: #444444;
+    color: darkslategrey;
     opacity: 20;
 
 }
@@ -93,12 +99,12 @@ body {
     font-size: 30px;
     font-weight: 60;
     margin: auto;
-    font-family: 'Balthazar', serif;
+    font-family: 'Permanent Marker', cursive;
     text-align: center;
     color: #444444;
     width: 115px;
     height: 77px;
-    background-color:black;
+    background-color:salmon;
     margin-bottom: 4rem;
     border-radius: 20px;
 
@@ -114,9 +120,10 @@ body {
     display: flex;
     flex-direction: column;
     flex: 1 1 100%;
-    background-color: #d8d8d8;
+    background-color:darkgray;
     opacity: 0.7;
     height: 470px;
+    border-radius: 20px;
 }
 
 .middleSection {
@@ -134,7 +141,7 @@ body {
     flex: 1 1 1000px;
     position: relative;
     align-self: flex-end;
-    font-family: 'Balthazar', sans-serif;
+    font-family: 'Permanent Marker', cursive;
     font-size: .98rem;
     color: #444444;
     text-align: center;
@@ -146,14 +153,23 @@ body {
     outline: none;
     position: relative;
     transform: translate(0%, 370%);
+    width:2px;
+    height:2px;
+    margin-right:32px;
+    margin-top: 40px;
+}
+.keepBtn button {
+    color: rgb(253, 253, 253);
+    border-radius: 9px;
+
 }
 
 button {
     cursor: pointer;
     border: none;
     outline: none;
-    width: 82px;
-    height: 26px;
+    width: 25px;
+    height: 25px;
     background: none;
 }
 
@@ -172,12 +188,6 @@ button {
     font-weight: 100;
 }
 
-.keepBtn button {
-    color: rgb(253, 253, 253);
-    border-radius: 9px;
-    background-color: #1520be;
-}
-
 .diceJS {
     width: 94px;
     height: 90px;
@@ -188,22 +198,26 @@ button {
 .newGameBtn{
     position: relative;
     transform: translate(0%, -400%);
-    resize: 50px;
-    color: red;
+    height: 20px;
+    width:20px;
 }
 .newGameBtn img{
     height: .96rem;
     transform: translate(-25%,15%);
-    color:red;
+    position: vertical;
 }
 
 .rollBtn { 
     position:relative;
+    margin-bottom:45px;
     transform: translate(0%, 405%);
+
 }
 .rollBtn img {
     height: .75rem;
     transform: translate(-25%, 15%);
+    width:50px;
+    height:20px;
 }
 
 .activeJS{
