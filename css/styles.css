@@ -129,3 +129,69 @@ body {
     text-align: center;
     transform:translate(1.5%,330%);   
 }
+
+.keepBtn {
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    transform: translate(0%, 370%);
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    width: 82px;
+    height: 26px;
+    background: none;
+}
+
+.currentPlayer {
+    display:none;
+    position: relative;
+    left: 10%;
+    transform:translate(0, -30%);
+    background-color: red;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    color: rgb(253, 253, 253);
+    font-size: 0.65rem;
+    padding-top: .1rem;
+    font-weight: 100;
+}
+
+.keepBtn button {
+    color: rgb(253, 253, 253);
+    border-radius: 9px;
+    background-color: #1520be;
+}
+
+.diceJS {
+    width: 94px;
+    height: 90px;
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+}
+
+.newGameBtn{
+    position: relative;
+    transform: translate(0%, -425%);
+}
+.newGameBtn img{
+    height: .75rem;
+    transform: translate(-25%,15%);
+}
+
+.rollBtn { 
+    position:relative;
+    transform: translate(0%, 405%);
+}
+.rollBtn img {
+    height: .75rem;
+    transform: translate(-25%, 15%);
+}
+
+.activeJS{
+    display:inline-block;
+}
