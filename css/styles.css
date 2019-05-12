@@ -1,1 +1,39 @@
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Bitter', serif;
+}
+
+html,
+body {
+    background-image: url(https://media.giphy.com/media/3oGRFlpAW4sIHA02NW/giphy.gif);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    left: 50%;
+    transform: translate(-40%, 30%);
+    align-items: center;
+    width: 1500px;
+    height:600px;
+}
+
+.player1Div {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 100%;
+    background-color: white;
+    opacity:0.7;
+    height: 470px;
+    margin: auto;
+    padding-bottom: 60px;
+}
