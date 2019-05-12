@@ -8,6 +8,10 @@ GAME RULES:
 - The first player to reach 100 points on GLOBAL score wins the game
 
 */
+var TotalScores, playerscore,activeplayer;//stors the global variables
+
+newGameBtn();//calls the init()function straight away which sets all values to 0
+
 const p1Score = document.querySelector('.player1Score');
 const p2Score = document.querySelector('.player2Score');
 const player1 = document.querySelector('.player1Header button');
