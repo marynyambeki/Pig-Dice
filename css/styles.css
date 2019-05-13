@@ -26,3 +26,27 @@ body {
     width: 1500px;
     height:600px;
     padding-right: 250px;
+}
+
+.player1Div {
+    font-family: 'Permanent Marker', cursive;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 100%;
+    background-color: white;
+    opacity:0.7;
+    height: 470px;
+    margin: auto;
+    /* padding-bottom: 60px;  */
+    border-radius: 20px;
+
+}
+
+.player1Header,
+.player2Header {
+    margin: auto;
+    margin-top: 50px;
+    width: 167px;
+    height: 53px;
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
