@@ -1,82 +1,98 @@
-/*
-GAME RULES:
+var player1="";
+var player2="";
 
-- The game has 2 players, playing in rounds
-- In each turn, a player rolls a dice as many times as he wishes. Each result get added to his ROUND score
-- BUT, if the player rolls a 1, all his ROUND score gets lost. After that, it's the next player's turn
-- The player can choose to 'Hold', which means that his ROUND score gets added to his GLBAL score. After that, it's the next player's turn
-- The first player to reach 100 points on GLOBAL score wins the game
-
-*/
-var TotalScores, playerscore,activeplayer;//stors the global variables
-
-newGameBtn();//calls the init()function straight away which sets all values to 0
-
-const player1Score = document.querySelector('.player1Score');
-const player2Score = document.querySelector('.player2Score');
-const player1 = document.querySelector('.player1Header button');
-const player2 = document.querySelector('.player2Header button');
-const player1TotalScore = document.querySelector('.player1TotalScoreNo');
-const player2TotalScore = document.querySelector('.ScoreNo');
-const newGameBtn = document.querySelector('.newGameBtn');
-const keepBtn = document.querySelector('.keepBtn button');
-const diceImg = document.querySelector('.diceJS');
-const rollBtn = document.querySelector('.rollBtn button');
-
-let currentPlayer;
-
-
-function newGame() {
-    diceImg.setAttribute('src', `https://game-icons.net/1x1/delapouite/dice-six-faces-one.html`);
-    player1Score.textContent = '0';
-    player2Score.textContent = '0';
-    player1TotalScore.textContent = '0';
-    player2TotalScore.textContent = '0';
-    player1.classList.remove('activeJS');
-    player2.classList.remove('activeJS');
-    player1.classList.add('activeJS');
-    currentPlayer = 'player1';
-    player1Score.style.color = 'rgb(78, 8, 51';
-    player2Score.style.color = 'rgb(78, 8, 51';
+var throwdice = function () {
+    return Math.floor(6 * Math.random())+1;
 }
-
-newGame();
-
-newGameBtn.addEventListener('click', () => newGame());
-
-const checkForWin = () => {
-    if (Number(player1Score.textContent) >= 100 || Number(player2Score.textContent) >= 100) {
-            currentPlayer = null;
-            player1.classList.remove('activeJS');
-            player2.classList.remove('activeJS');
-            if (Number(player1Score.textContent) >= 100) {
-                    player1Score.style.color = '#bada55';
-            } else {
-                    player2Score.style.color = '#bada55';
-            }
-    }
-};
-function keepTotalScore() {
-    checkForWin();
-    if (currentPlayer === 'player1' && player1TotalScore.textContent !== '0') {
-            const currentTotal = player1TotalScore.textContent;
-            const currentTotal = player1Score.textContent;
-            const newTotal = Number(currentTotal) + Number(currentTotal);
-            player1Score.textContent = newTotal;
-            player1TotalScore.textContent = '0';
-            currentPlayer = 'player2';
-            player1.classList.remove('activeJS');
-            player2.classList.add('activeJS');
-            checkForWin();
-    } else if (currentPlayer === 'player2' && player2TotalScore.textContent !== '0') {
-            const currentTemp = player2TotalScore.textContent;
-            const currentTotal = player2Score.textContent;
-            const newTotal = Number(currentTotal) + Number(currentTotal);
-            player2Score.textContent = newTotal;
-            player2TotalScore.textContent = '0';
-            currentPlayer = 'player1';
-            player2.classList.remove('activeJS');
-            player1.classList.add('activeJS');
-            checkForWin();
+function Player(turn) {
+    this.roll = 0;
+    this.rollscore = 0;
+    this.totalscore = 0;
+    this.turn = turn;
+    this.players;
+}
+Player.prototype.rollone = function() {
+    if (this.roll === 1) {
+    this.rollscore = 0;
+    alert("Turn over " + ", you rolled a 1! Try your luck next time!")
+    } else {
+    this.rollscore += this.roll;
     }
 }
+Player.prototype.hold = function () {
+    this.totalscore += this.rollscore;
+    this.rollscore = 0;
+    alert(" your turn is over");
+}
+Player.prototype.winner = function () {
+    if (this.totalscore >= 100) {
+      alert("Congratulations " + " You won the game!");
+    }
+}
+Player.prototype.newGame = function () {
+    this.roll = 0;
+    this.rollscore = 0;
+    this.totalscore = 0;
+    this.players ="";
+}
+var clearValues = function(){
+    $(".player1").val("");
+    $(".player2").val("");
+}
+ $(document).ready(function() {
+    $(".start").click(function(event){
+        player1 = new Player(true);
+        player2 =  new Player(false);
+        $(".gaming").show();
+         $(".landing").slideToggle();
+    
+         var player1Name = $(".player1Name").val();
+        $("#player1Name").text(player1Name);
+    
+         var player2Name = $(".player2Name").val();
+         $("#player2Name").text(player2Name);
+    
+         player1.player1=player1;
+         player2.player2=player2;
+    
+     });
+    $(".newGameBtn").click(function(event){
+        // $(".landing").slideToggle();
+        // $(".player-console").slideToggle();
+        clearValues();
+        player1.newGame();
+        player2.newGame();
+        $(".player1TotalScore").empty();
+        $(".player1ScoreNo").empty();
+        $(".player1Score").empty();
+        $(".player2TotalScore").empty();
+        $(".player2ScoreNo").empty();
+        $(".player2Score").empty();
+    });
+    $(".rollBtn").click(function(event){
+        player1.roll = throwdice();
+        $(".player1Score").text(player1.roll);
+        player1.rollone();
+        $(".player1TotalScore").text(player1.rollscore);
+    });
+    $(".rollBtn").click(function(event){
+        player2.roll = throwdice();
+        $(".player2Score").text(player2.roll);
+        player2.rollone();
+        $(".player2TotalScore").text(player2.rollscore);
+    });
+    $(".keepBtn").click(function(event){
+        player1.hold();
+        $(".player1ScoreNo").text(player1.totalscore);
+        $(".player1TotalScore").empty();
+        $(".player1Score").empty();
+        player1.winner();
+    });
+    $(".keepBtn").click(function(event){
+        player2.hold();
+        $(".player2ScoreNo").text(player2.totalscore);
+        $(".player2TotalScore").empty();
+        $(".player2Score").empty();
+        player2.winner();
+    });
+});
