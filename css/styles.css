@@ -80,3 +80,154 @@ body {
     color:whitesmoke;
     opacity: 100;
     font-weight: bold;
+}
+
+.player1ScoreNo,.player2ScoreNo{
+    position: relative;
+    margin: auto;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 20px;
+    color:white;
+    opacity: 20;
+
+}
+
+.player1ScoreDiv,.player2ScoreDiv {
+    display: flex;
+    flex-direction: column;
+    font-size: 30px; 
+    font-weight: 60;
+    margin: auto;
+    font-family: 'Permanent Marker', cursive;
+    text-align: center;
+    color: #444444;
+    width: 115px;
+    height: 77px;
+    background-color:salmon;
+    margin-bottom: 0.4rem;
+    border-radius: 20px;
+    /* padding-top: 50px; */
+
+}
+/* .player2ScoreDiv,.player1ScoreDiv{
+    margin-top: 160px;
+} */
+
+
+.player2Div {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 100%;
+    background-color:darkgray;
+    opacity: 0.7;
+    height: 470px;
+    border-radius: 20px;
+
+}
+
+
+.middleSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    right: 50%;
+    transform: translate(0,-13%);
+}
+
+.instructions {
+    display:flex;
+    flex-direction: column;
+    flex: 1 1 1000px;
+    position: relative;
+    align-self: flex-end;
+    font-family: 'Permanent Marker', cursive;
+    font-size: .98rem;
+    color:white;
+    text-align: center;
+    transform:translate(1.5%,330%); 
+}
+
+.keepBtn {
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    transform: translate(0%, 370%);
+    width:2px;
+    height:2px;
+    margin-right:32px;
+    margin-top: 40px;
+}
+.keepBtn button {
+    color: rgb(253, 253, 253);
+    border-radius: 9px;
+    width:60px;
+    height:50px;
+    padding-right:10px;
+    margin-top: 30px;
+    margin-right: 48px;
+
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    width: 25px;
+    height: 25px;
+    background: none;
+}
+
+.currentPlayer {
+    display:none;
+    position: relative;
+    left: 10%;
+    transform:translate(0, -30%);
+    background-color: red;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    color: rgb(253, 253, 253);
+    font-size: 0.65rem;
+    padding-top: .1rem;
+    font-weight: 100;
+}
+
+.diceJS {
+    width: 94px;
+    height: 90px;
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+}
+
+.newGameBtn{
+    position: relative;
+    transform: translate(0%, -400%);
+    height: 20px;
+    width:20px;
+}
+.newGameBtn img{
+    height: .96rem;
+    transform: translate(-25%,15%);
+    position: vertical;
+}
+
+.rollBtn { 
+    position:relative;
+    margin-bottom:20px;
+    transform: translate(0%, 405%);
+}
+.rollBtn img {
+    height: .75rem;
+    transform: translate(-25%, 15%);
+    width:50px;
+    height:50px;
+}
+
+.activeJS{
+    display:inline-block;
+}
+.game-start {
+    transform: translate(-25%, 15%);
+    margin-left:0px;
+}
