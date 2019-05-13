@@ -50,3 +50,33 @@ body {
     height: 53px;
     text-align: center;
     font-family: 'Permanent Marker', cursive;
+
+}
+.player1Header{
+    color:deeppink;
+    font-family: 'Permanent Marker', cursive;
+}
+.player2Header{
+    color: deeppink;
+    font-family: 'Permanent Marker', cursive;
+}
+
+.player1Score,
+.player2Score {
+    margin: auto;
+    font-size: 80px;
+    font-style: italic;
+    color:rgb(78, 8, 51);
+    opacity: 70;
+    position: relative;
+    transform: translate(0%, -13%);
+
+}
+
+.player1TotalScore,.player2TotalScore {
+    font-family: 'Permanent Marker', cursive;
+    /* font-size: 0.7em; */
+    text-align: center;
+    color:whitesmoke;
+    opacity: 100;
+    font-weight: bold;
