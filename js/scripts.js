@@ -19,3 +19,19 @@ Player.prototype.rollone = function() {
     this.rollscore += this.roll;
     }
 }
+Player.prototype.keep = function () {
+    this.totalscore += this.rollscore;
+    this.rollscore = 0;
+    alert(" your turn is over");
+}
+Player.prototype.winner = function () {
+    if (this.totalscore >= 100) {
+      alert("Congratulations " + " You won the game!");
+    }
+}
+Player.prototype.newGame = function () {
+    this.roll = 0;
+    this.rollscore = 0;
+    this.totalscore = 0;
+    this.players ="";
+}
