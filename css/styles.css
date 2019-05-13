@@ -147,24 +147,38 @@ body {
     text-align: center;
     transform:translate(1.5%,330%); 
 }
+.keepBtn2{
+    margin-left: 65%;
+    margin-bottom: 10%;
+}
+.keepBtn1{
+    margin-top: 10%;
+}
+.row{
 
-.keepBtn {
+    /* padding-bottom: 100%; */
+}
+
+
+
+.keepBtn1,.keepBtn2 {
     cursor: pointer;
     outline: none;
     position: relative;
     transform: translate(0%, 370%);
     width:2px;
     height:2px;
-    margin-right:32px;
-    margin-top: 40px;
+    margin-right:100px;
+
+    /* margin-top: px; */
 }
-.keepBtn button {
+.keepBtn1 button,.keepBtn2 button{
     color: rgb(253, 253, 253);
     border-radius: 9px;
     width:60px;
     height:50px;
     padding-right:10px;
-    margin-top: 30px;
+    
     margin-right: 48px;
 
 }
@@ -211,14 +225,29 @@ button {
     transform: translate(-25%,15%);
     position: vertical;
 }
-
-.rollBtn { 
-    position:relative;
-    margin-bottom:20px;
-    transform: translate(0%, 405%);
+.rollBtn1 p{
+    color: rgb(253, 253, 253);
 }
-.rollBtn img {
-    height: .75rem;
+.rollBtn2 p{
+    color: rgb(253, 253, 253);
+}
+
+.rollBtn1{
+    margin-right:100%;
+    padding:5px 0px;
+}
+.rollBtn2{
+    margin-left:100%;
+}
+.rollBtn1,.rollBtn2 { 
+    color: rgb(253, 253, 253);
+    transform: translate(0%, 170%);
+}
+.rollBtn2{
+    transform: translate(0%, 100%);
+}
+.rollBtn1 img,.rollBtn2 img{
+    /* height: .75rem; */
     transform: translate(-25%, 15%);
     width:50px;
     height:50px;
@@ -230,4 +259,10 @@ button {
 .game-start {
     transform: translate(-25%, 15%);
     margin-left:0px;
+}
+.keepBtn1{
+    /* height: 50px;
+    width:50px;
+ margin-left: 100%;
+    float:right; */
 }

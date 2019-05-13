@@ -69,27 +69,27 @@ var clearValues = function(){
         $(".player2ScoreNo").empty();
         $(".player2Score").empty();
     });
-    $(".rollBtn").click(function(event){
+    $(".rollBtn1").click(function(event){
         player1.roll = throwdice();
         $(".player1Score").text(player1.roll);
         player1.rollone();
         $(".player1TotalScore").text(player1.rollscore);
     });
-    $(".rollBtn").click(function(event){
+    $(".rollBtn2").click(function(event){
         player2.roll = throwdice();
         $(".player2Score").text(player2.roll);
         player2.rollone();
         $(".player2TotalScore").text(player2.rollscore);
     });
-    $(".keepBtn").click(function(event){
-        player1.hold();
+    $(".keepBtn1").click(function(event){
+        player1.keep();
         $(".player1ScoreNo").text(player1.totalscore);
         $(".player1TotalScore").empty();
         $(".player1Score").empty();
         player1.winner();
     });
-    $(".keepBtn").click(function(event){
-        player2.hold();
+    $(".keepBtn2").click(function(event){
+        player2.keep();
         $(".player2ScoreNo").text(player2.totalscore);
         $(".player2TotalScore").empty();
         $(".player2Score").empty();
