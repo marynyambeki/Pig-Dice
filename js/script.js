@@ -16,4 +16,21 @@ function getSum(total, dice) {
     return total + dice;
 }
 
-});
+$(".holdBtn2").hide();
+$(".rollBtn2").hide();
+$(document).ready(function () {
+    $(".rollBtn1").click(function () {
+        roll();
+        if (random == 1) {
+            $(".holdBtn1").hide();
+            $(".rollBtn1").hide();
+            $(".holdBtn2").toggle();
+            $(".rollBtn2").toggle();
+        } else {
+            diceTotal1.push(random);
+            total1 = diceTotal1.reduce(getSum, 0);
+            $(".player1Score").text(random);
+        }
+        console.log(random);
+    });
+   
