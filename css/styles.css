@@ -147,11 +147,11 @@ body {
     text-align: center;
     transform:translate(1.5%,330%); 
 }
-.keepBtn2{
+.holdBtn2{
     margin-left: 65%;
     margin-bottom: 10%;
 }
-.keepBtn1{
+.holdBtn1{
     margin-top: 10%;
 }
 .row{
@@ -161,7 +161,7 @@ body {
 
 
 
-.keepBtn1,.keepBtn2 {
+.holdBtn1,.holdBtn2 {
     cursor: pointer;
     outline: none;
     position: relative;
@@ -172,7 +172,7 @@ body {
 
     /* margin-top: px; */
 }
-.keepBtn1 button,.keepBtn2 button{
+.holdBtn1 button,.holdBtn2 button{
     color: rgb(253, 253, 253);
     border-radius: 9px;
     width:60px;
@@ -214,16 +214,6 @@ button {
     border-radius: 15px;
 }
 
-.newGameBtn{
-    position: relative;
-    transform: translate(0%, -400%);
-    height: 20px;
-    width:20px;
-}
-.newGameBtn img{
-    height: .96rem;
-    transform: translate(-25%,15%);
-    position: vertical;
 }
 .rollBtn1 p{
     color: rgb(253, 253, 253);
