@@ -34,14 +34,13 @@ $(document).ready(function () {
         console.log(random);
     });
     $(".holdBtn1").click(function () {
-       
         $(".holdBtn1").hide();
         $(".rollBtn1").hide();
         $(".holdBtn2").toggle();
         $(".rollBtn2").toggle();
         diceTotal1 = [];
         final1 += total1;
-        $(".player1TotalScore").text(final1);
+        $(".player1TotalScore").innerHTML= final1;
         if(final1 >= 100){
             alert("Hurray!!! Player 1 won")
         }
