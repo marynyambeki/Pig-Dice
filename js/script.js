@@ -15,3 +15,5 @@ function roll() {
 function getSum(total, dice) {
     return total + dice;
 }
+
+});
