@@ -47,4 +47,16 @@ $(document).ready(function () {
         }
     });
 
-    git 
+    $(".rollBtn2").click(function () {
+        roll();
+        if (random == 1) {
+            $(".holdBtn2").hide();
+            $(".rollBtn2").hide();
+            $(".holdBtn1").toggle();
+            $(".rollBtn1").toggle();
+        } else {
+            diceTotal2.push(random);
+            total2 = diceTotal2.reduce(getSum, 0);
+
+            $(".player2Score").text(random);
+    
