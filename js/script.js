@@ -59,4 +59,24 @@ $(document).ready(function () {
             total2 = diceTotal2.reduce(getSum, 0);
 
             $(".player2Score").text(random);
-    
+        }
+        console.log(random);
+    });
+    $(".holdBtn2").click(function () {
+       
+        $(".holdBtn2").hide();
+        $(".rollBtn2").hide();
+        $(".holdBtn1").toggle();
+        $(".rollBtn1").toggle();
+        // random = 0;
+        diceTotal2 = [];
+        final2 += total2;
+        $(".player2TotalScore").text(final2);
+
+        if(final2 >= 100){
+            alert("Hurray!!! Player 2 won")
+        }
+    });
+
+
+});
